@@ -1,30 +1,50 @@
 class CompaniesController < ApplicationController
 
-def index
+	def index
 
-end
+	end
 
-def show
+	def new
+		@user = User.find(params[:user_id])
+		@company = Company.new
 
-end
+	end
 
-def new
+	def show
+		@company = Company.find(params[:id])
 
-end
+	end
+
+
 
 def create
+	@company = current_user.companies.new(company_params)
+	if @company.save
+		flash[:success] = "Company has been saved"
+		redirect_to user_path current_user
+
+	else
+		flash[:danger] = "Cant be saved"
+		render 'new'
+end
 
 end
 
-def edit
+	def edit
 
-end
+	end
 
-def update
+	def update
 
-end
+	end
 
-def destroy
+	def destroy
 
-end
+	end
+
+private
+
+	def company_params
+		params.require(:company).permit(:name, :description, :user_id)
+	end
 end
