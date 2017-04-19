@@ -25,17 +25,22 @@
 </table>
 
 	</div>
-	        <div class="col-md-3">
+<% if user_signed_in? %>
+        <div class="col-md-3">
           <div class="well sidebar-nav">
-            <div class="round-image-50 text-center"><%= image_tag(current_user.avatar.url(:thumb)) %></div>
+          <div align="center">
+            <div  class="round-image-50 "><%= image_tag(current_user.avatar.url(:thumb)) %></div>
+
+            </div>
+            <p class="text-center"><%= current_user.name %></p>
             <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "#"  %></li>
-              <li><%= link_to "Link2", "#"  %></li>
-              <li><%= link_to "Link3", "#"  %></li>
+              <li class="nav-header"></li>
+              <li><%= link_to "Informacion de Usuario", edit_user_registration_path  %></li>
+              <li><%= link_to "Agregar nueva compania", new_user_company_path(@company)  %></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
+        <% end %>
 
 
 </div>

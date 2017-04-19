@@ -1,11 +1,11 @@
 class CompaniesController < ApplicationController
-
+before_action :authenticate_user!
 	def index
 		@companies = Company.all.order('created_at DESC ')
 	end
 
 	def new
-		@user = User.find(params[:user_id])
+		@user = User.find_by(params[:id])
 		@company = Company.new
 
 	end
