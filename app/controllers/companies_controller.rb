@@ -1,7 +1,7 @@
 class CompaniesController < ApplicationController
 
 	def index
-
+		@companies = Company.all.order('created_at DESC ')
 	end
 
 	def new
@@ -11,6 +11,7 @@ class CompaniesController < ApplicationController
 	end
 
 	def show
+		@user = User.find(params[:user_id])
 		@company = Company.find(params[:id])
 
 	end

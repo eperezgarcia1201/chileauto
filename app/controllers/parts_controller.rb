@@ -47,7 +47,7 @@ end
 private
 
 def parts_params
-	params.require(:part).permit(:name, :description, :user_id )
+	params.require(:part).permit(:name, :description, :user_id4 )
 
 end
 
