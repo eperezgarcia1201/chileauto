@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-before_action :authenticate_user!
+before_action :authenticate_user!, :except => [:index, :show]
 	def index
 		@companies = Company.all.order('created_at DESC ')
 	end
@@ -11,7 +11,7 @@ before_action :authenticate_user!
 	end
 
 	def show
-		@user = User.find(params[:user_id])
+		/@user = User.find(params[:user_id])/
 		@company = Company.find(params[:id])
 
 	end
