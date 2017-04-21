@@ -18,7 +18,8 @@ def new
 end
 
 def create
-	@part = current_user.parts.new(parts_params)
+	@company = Company.find(params[:company_id])
+	@part = @company.parts.new(parts_params)
 	@part.user_id = current_user.id
 	if @part.save
 		flash[:success] = "have been saved"
@@ -47,7 +48,7 @@ end
 private
 
 def parts_params
-	params.require(:part).permit(:name, :description, :user_id4 )
+	params.require(:part).permit(:name, :description, :user_id, :company_id )
 
 end
 
