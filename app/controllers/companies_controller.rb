@@ -11,7 +11,7 @@ before_action :authenticate_user!, :except => [:index, :show]
 	end
 
 	def show
-		/@user = User.find(params[:user_id])/
+		@user = User.find(params[:user_id])
 		@company = Company.find(params[:id])
 
 	end

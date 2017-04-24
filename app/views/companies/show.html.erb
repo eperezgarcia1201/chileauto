@@ -7,3 +7,5 @@
 <p><%= @company.name %></p>
 
 <p><%= @company.description %></p>
+
+<%= link_to "New Part", new_user_company_part_path(@user, @company, @part) %>
