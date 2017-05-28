@@ -21,6 +21,7 @@ gem 'devise-bootstrap-views'
 gem "font-awesome-rails"
 gem 'paperclip', '~> 4.1'
 gem 'simple_form'
+gem 'city-state'
 gem "country_state_select", :github => 'arvindvyas/Country-State-Select', :branch => 'master'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

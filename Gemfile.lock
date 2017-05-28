@@ -203,6 +203,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   bootstrap-sass-extras
   byebug
+  city-state
   coffee-rails (~> 4.2)
   country_state_select!
   devise
