@@ -23,6 +23,8 @@ gem 'paperclip', '~> 4.1'
 gem 'simple_form'
 gem 'city-state'
 gem "country_state_select", :github => 'arvindvyas/Country-State-Select', :branch => 'master'
+gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
+                              :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

@@ -2,24 +2,5 @@
 	<div class="panel-heading">
 		<h1 align="center">Tu Compania</h1>
 	</div>
-		<%= simple_form_for [@user, @company] do |f| %>
-			<div class="form-group">
-			<%= f.label :name %>
-			<%= f.text_field :name, class: "form-control" %>
-			</div>
-			<div class="form-group">
-			<%= f.label :description %>
-			<%= f.text_field :description, class: "form-control" %>
-			</div>
-			<div class="form-group">
-			<%= f.input :country_field, label: "Country", collection: CountryStateSelect.countries_collection %>
-			</div>
-			<div class="form-group">
-			<%= f.input :state_field, CountryStateSelect.state_options(label: "State / Province", form: f, field_names: { :country => :country_field, :state => :state_field } ) %>
-			</div>
-			<div class="form-group">
-			<%= f.input :city_field, CountryStateSelect.city_options(label: "City ", form: f, field_names: {  :state => :state_field, :city => :city_field } ) %>
-			</div>
-		<%= f.submit class: "btn btn-primary" %>
-		<% end %>
+<%= render 'form' %>
 </div>

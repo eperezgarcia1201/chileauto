@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require country_state_select
+//= require bootstrap-datepicker
 //= require turbolinks
 //= require_tree .

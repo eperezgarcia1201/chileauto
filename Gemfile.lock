@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/Nerian/bootstrap-datepicker-rails.git
+  revision: 862e5ec85ee2da7cc8f893d6d07050cb0c1131b0
+  specs:
+    bootstrap-datepicker-rails (1.6.4.1)
+      railties (>= 3.0)
+
+GIT
   remote: https://github.com/arvindvyas/Country-State-Select.git
   revision: df934e2b345cc962c77aeb50184c4874f975cb61
   branch: master
@@ -200,6 +207,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-datepicker-rails!
   bootstrap-sass (~> 3.3.6)
   bootstrap-sass-extras
   byebug
